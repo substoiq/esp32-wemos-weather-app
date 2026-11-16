@@ -1,0 +1,6 @@
+# Name,   Type, SubType, Offset,  Size, Flags
+# The board has 4 MB flash. The app (LVGL + Wi-Fi + HTTPS) does not fit in the
+# default 1 MB app partition, so the app gets 3 MB here.
+nvs,      data, nvs,     ,        0x6000,
+phy_init, data, phy,     ,        0x1000,
+factory,  app,  factory, ,        3M,

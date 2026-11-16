@@ -1,0 +1,13 @@
+# ESP-IDF build output and generated files
+build/
+managed_components/
+sdkconfig
+sdkconfig.old
+# sdkconfig is generated from sdkconfig.defaults, so it is not in git
+
+# Secrets (an example lives in main/credentials.example.h)
+main/credentials.h
+
+# macOS and editor
+.DS_Store
+.vscode/

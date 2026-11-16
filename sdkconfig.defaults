@@ -1,0 +1,26 @@
+# Default settings for this project. sdkconfig is generated from this file.
+# Changing settings is also possible with: idf.py menuconfig
+# After editing this file: delete sdkconfig so the settings are read again.
+
+# Board: Wemos LOLIN32 Lite = classic ESP32 (not an S3), 4 MB flash, no PSRAM
+CONFIG_IDF_TARGET="esp32"
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+CONFIG_FREERTOS_HZ=1000
+
+# HTTPS: built-in list of trusted root certificates
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE=y
+CONFIG_MBEDTLS_CERTIFICATE_BUNDLE_DEFAULT_CMN=y
+
+# This board has no PSRAM, so RAM is tight (Wi-Fi + HTTPS + LVGL share ~300 kB).
+# A smaller TLS send buffer saves 12 kB; we only send short GET requests.
+CONFIG_MBEDTLS_ASYMMETRIC_CONTENT_LEN=y
+CONFIG_MBEDTLS_SSL_OUT_CONTENT_LEN=4096
+
+# LVGL: take memory from the normal heap instead of a fixed 64 kB block
+CONFIG_LV_USE_CLIB_MALLOC=y
+CONFIG_LV_FONT_MONTSERRAT_12=y
+CONFIG_LV_FONT_MONTSERRAT_14=y
+CONFIG_LV_FONT_MONTSERRAT_16=y
+CONFIG_LV_FONT_MONTSERRAT_48=y

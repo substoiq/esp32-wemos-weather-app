@@ -1,0 +1,4 @@
+# Project file for ESP-IDF. These lines must stay in this order.
+cmake_minimum_required(VERSION 3.16)
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(esp32-wemos-weather-app)
