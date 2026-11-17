@@ -50,6 +50,8 @@ stays white.
 | Y+, X+, Y-, X- | not connected | Touch (not used yet) |
 | CCS, CD | not connected | SD card (not used) |
 
+<img src="wemos_lolin32_lite_to_adafruit_tft_wiring.png" alt="Schema" width="650">
+
 The pins are set in `main/board_config.h`.
 
 To switch the backlight from the program, connect **Lite** to a free pin

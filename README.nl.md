@@ -51,6 +51,8 @@ jumper blijft het scherm wit.
 | Y+, X+, Y-, X- | niet aansluiten | Touch (nog niet gebruikt) |
 | CCS, CD | niet aansluiten | SD-kaart (niet gebruikt) |
 
+<img src="wemos_lolin32_lite_to_adafruit_tft_wiring.png" alt="Schema" width="650">
+
 De pinnen staan in `main/board_config.h`.
 
 Wil je de achtergrondverlichting vanuit het programma schakelen, verbind dan
